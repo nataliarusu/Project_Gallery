@@ -1,0 +1,98 @@
+:root {
+  --main-color: #186052;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+#projects {
+  max-width: 95vw;
+  margin: 2rem auto;
+  position: relative;
+}
+.projects-title {
+  margin: 0;
+  padding: 1rem;
+  position: sticky;
+  top: 5px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 0 0.7rem;
+}
+.projects-list {
+  list-style: none;
+  padding: 0; /*ul default padding*/
+}
+.cards {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.card {
+  max-width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.remark {
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+.card-img--wrapper {
+  border-bottom: 2px solid #383f4f;
+  max-height: 186px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  vertical-align: middle;
+}
+.card-btn {
+  width: 100%;
+  height: 2rem;
+  background: #0e3a32;
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  color: white;
+}
+.card-btn:hover,
+.card-btn:active {
+  box-shadow: 1px 1px 2px #4c544c;
+}
+.note {
+  color: rgb(219, 7, 7);
+  font-size: 0.5rem;
+}
+.hidden {
+  display: none;
+}
+.expanded {
+  background: var(--main-color);
+  font-weight: 600;
+}
+.lang {
+  border: 1px solid #186052;
+}
+@media screen and (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 350px;
+  }
+  .card-img--wrapper {
+    max-height: 210px;
+    overflow: hidden;
+  }
+}
